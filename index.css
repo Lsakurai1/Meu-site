@@ -1,0 +1,236 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;/*funçao para td html*/
+}
+
+body {
+	color:  #C0C0C0;
+	background: #020024;
+	font-family: 'Segoe UI', Arial, helvetica, sans-serif;
+}
+
+.navegacao{/*referencia para navegacao*/
+	position: fixed;
+	background: rgba(15, 23, 42 , 0.8);
+	width: 100%;
+	z-index: 100;
+	padding: 1.5rem;
+}
+
+.menu{
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	gap: 3rem;
+}
+
+.menu-link{
+	text-decoration: none;
+	color: #C0C0C0;
+	font-weight: 500;
+	position: relative;
+	padding: 0.5rem;
+}
+
+.menu-link::after {
+	content: '';
+	height: 2px;
+	width: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(90deg, #621F8C, #020024);
+	transition: width 0.5s ease;
+}
+
+.menu-link:hover::after{
+	width: 100%;
+}
+ul {
+	justify-content: space-between;
+	list-style-type: none;
+	align-items: center;
+	padding: 16px;
+
+}
+
+a {
+	color:  #C0C0C0;
+	text-decoration: none;
+}
+
+.img-perfil{
+	width: 200px;
+	height: 200px;
+	box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+	border-radius: 50%;
+	border: 4px solid #030A5E;
+}
+
+.center {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+h1 {
+	font-size: 2rem;
+	color: #030D82;
+	font-weight: bold;
+	margin: 10px;
+}
+.cabecalho{
+	font-size: 1.5rem;
+	color: #B1B7F2;
+}
+
+.sobre {
+	display: flex;
+	flex-direction: column;    
+	justify-content: center;      
+	align-items: center;          
+	min-height: 100vh;          
+	padding: 3rem 1rem;
+}
+
+.sobre-titulo {
+	font-size: 3rem;
+	color: #B1B7F2;
+	text-align: center;
+}
+
+.sobre-caixa { /* detalhamento para a estilizaçao do sobre*/
+	padding: 2rem;
+	max-width: 600px;
+	margin: 0 auto;
+	border-radius: 16px;
+	border: 1px solid rgba(255, 255, 255 , 0.1);
+	backdrop-filter: blur(10px);
+	background: rgb(255, 255, 255 , 0.05);
+
+}
+
+.repertorio{
+	padding: 8rem 2rem 6rem 2rem;
+}
+
+.repertorio-titulo{
+	font-size: 3rem;
+	padding: 4rem;
+	color: #B1B7F2;
+	text-align: center;
+}
+
+.container {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 2rem;
+	padding: 2rem;
+	width: 100%;
+}
+
+.container .card {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	width: 420px;
+	height: 300px;
+	border-radius: 20px;
+	box-shadow: 0 35px 80px black;
+	background: #fff;
+	transition: .5s;
+	backdrop-filter: blur(10px);
+	background: rgb(255, 255, 255 , 0.05);
+}
+
+.container .card:hover {
+	height: 400px;
+}
+
+.container .card .caixaimg {
+	position: absolute;
+	top: 20px;
+	width: 300px;
+	height: 220px;
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.container .card .caixaimg img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.container .card .conteudo {
+	position: absolute;
+	top: 250px;
+	width: 100%;
+	height: 35px;
+	padding: 0 30px;
+	overflow: hidden;
+	text-align: center;
+	transition: .5s;
+}
+
+.container .card:hover .conteudo{
+	top: 150px;
+	height: 250px;
+}
+
+.container .card:hover .caixaimg {
+	top: -100px;
+	transform: scale(0.75);
+	box-shadow: 0 15px 45px black;
+	transition: .5s;
+}
+
+.container .card:hover .conteudo h2{
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 3rem;
+}
+
+.contato {
+	padding: 4rem 2rem;
+	text-align: center;
+}
+
+.contato-titulo {
+	font-size: 2.5rem;
+	color: #B1B7F2;
+	margin-bottom: 2rem;
+}
+
+.contato-lista {
+	list-style: none;
+	display: flex;
+	gap: 2rem;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 0;
+}
+
+.contato-lista li a {
+	color: #C0C0C0;
+	font-size: 1.2rem;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+.contato-lista li a:hover {
+	color: #621F8C;
+}
